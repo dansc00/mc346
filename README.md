@@ -1,1 +1,1 @@
-# mc346
+Repositório da disciplina Paradigmas de Programação
