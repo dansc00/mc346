@@ -1,0 +1,1 @@
+-- Recebe uma posição n e imprime a lista invertida de n até a posição 1
