@@ -4,8 +4,6 @@ getElement [] _ = error "Indice inválido"
 getElement (x:xs) 0 = x
 getElement (x:xs) n = getElement xs (n-1)
 
-addElem x xs = x : xs
-
 rangeRev [] _ = []
 rangeRev [x] _ = [x]
 rangeRev xs 0 = [getElement xs 0]
