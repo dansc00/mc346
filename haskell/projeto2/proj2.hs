@@ -19,10 +19,3 @@ comprimir list = execComprimir list 0
 
 descomprimir [] = []
 descomprimir list = execDescomprimir list 0 
-
-main = do
-    let listaComprimida = comprimir "aaabbaasxbbbb"
-    print listaComprimida
-
-    let listaDescomprimida = descomprimir listaComprimida
-    print listaDescomprimida
