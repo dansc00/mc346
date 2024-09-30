@@ -1,16 +1,20 @@
 % Programa que recebe uma lista e retorna a soma dos elementos em posições pares
 
-evenSumAux([],_,0).
+evenSumAux([], _, 0).
 
-evenSum(List, Sum) :- evenSumAux(List, 1, Sum).
+evenSum(L, S) :-
+    evenSumAux(L, 1, S).
 
-evenSumAux([_|T], I, Sum) :-
-    I mod 2 ==:== 1,
-    NewI is I+1,
-    evenSum(T, NewI, Sum).
+evenSumAux([_|T], I, S) :-
+    I mod 2 =:= 1,                  
+    II is I + 1,                  
+    evenSumAux(T, II, S).       
 
-evenSumAux([H|T], I, Sum) :-
-    I mod 2 =:= 0,
-    NewI is I+1,
-    evenSum(T, NewI, SumT),
-    Sum is SumT + H.  
+% Regra para posição par: Soma o elemento e continua
+evenSumAux([H|T], I, S) :-
+    I mod 2 =:= 0,                  
+    II is I + 1,                  
+    evenSumAux(T, II, SS),      
+    S is SS + H.                
+
+      
